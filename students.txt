@@ -1,0 +1,5 @@
+100   Nina   MTech   First
+87   Lana   MSc   First
+98   Tina   M.B.A   Second
+65   Rahul   BSc   Fifth
+4   Rohan Babbar   BTech   Second

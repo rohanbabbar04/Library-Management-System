@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="532.0" prefWidth="716.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.StudentDataController">
+    <ImageView>
+        <Image requestedHeight="532.0" requestedWidth="716.0" url="@/libraryBackground.jpg" />
+    </ImageView>
+   <Button layoutX="41.0" layoutY="128.0" mnemonicParsing="false" onAction="#clickIssueBook" prefHeight="43.0" prefWidth="157.0" style="-fx-background-color: black;" text="ISSUE BOOK" textFill="#f4b507">
+      <font>
+         <Font name="Papyrus" size="12.0" />
+      </font>
+   </Button>
+   <Button layoutX="41.0" layoutY="200.0" mnemonicParsing="false" onAction="#clickReturnBook" prefHeight="43.0" prefWidth="157.0" style="-fx-background-color: black;" text="RETURN BOOK" textFill="#f4b507">
+      <font>
+         <Font name="Papyrus" size="12.0" />
+      </font>
+   </Button>
+   <Button layoutX="41.0" layoutY="272.0" mnemonicParsing="false" onAction="#clickStudentActivity" prefHeight="43.0" prefWidth="178.0" style="-fx-background-color: black;" text="STUDENT ACTIVITY" textFill="#f4b507">
+      <font>
+         <Font name="Papyrus" size="12.0" />
+      </font>
+   </Button>
+   <Button fx:id="mainMenuButton" layoutX="41.0" layoutY="373.0" mnemonicParsing="false" onAction="#clickMainMenuButton" prefHeight="43.0" prefWidth="157.0" style="-fx-background-color: black;" text="&lt;&lt; MAIN MENU" textFill="#f4b507">
+      <font>
+         <Font name="Papyrus" size="12.0" />
+      </font>
+   </Button>
+   <Button layoutX="41.0" layoutY="62.0" mnemonicParsing="false" onAction="#clickNewStudent" prefHeight="43.0" prefWidth="157.0" style="-fx-background-color: black;" text="NEW  STUDENT" textFill="#f4b507">
+      <font>
+         <Font name="Papyrus" size="12.0" />
+      </font>
+   </Button>
+   <AnchorPane fx:id="issueBookAnchorPane" layoutX="276.0" layoutY="62.0" prefHeight="379.0" prefWidth="378.0" style="-fx-background-color: black;" visible="false">
+      <children>
+         <Label layoutX="76.0" layoutY="30.0" text="BOOK  ID" textFill="#f7a707">
+            <font>
+               <Font name="Papyrus" size="12.0" />
+            </font>
+         </Label>
+         <Label layoutX="59.0" layoutY="189.0" text="STUDENT ID" textFill="#f7a707">
+            <font>
+               <Font name="Papyrus" size="12.0" />
+            </font>
+         </Label>
+         <Button fx:id="issueButton" disable="true" layoutX="237.0" layoutY="330.0" mnemonicParsing="false" onAction="#clickIssueButton" prefHeight="26.0" prefWidth="126.0" style="-fx-background-color: ORANGE;" text="ISSUE" textFill="#101010">
+            <font>
+               <Font name="Papyrus" size="12.0" />
+            </font>
+         </Button>
+         <TextArea fx:id="bookDetailsTextArea" layoutX="73.0" layoutY="65.0" prefHeight="82.0" prefWidth="250.0" />
+         <TextArea fx:id="studentDetailsTextArea" layoutX="59.0" layoutY="235.0" prefHeight="82.0" prefWidth="260.0" style="-fx-background-color: orange;" />
+         <ComboBox fx:id="bookIDComboBox" layoutX="173.0" layoutY="31.0" prefWidth="150.0" />
+         <ComboBox fx:id="studentIDComboBox" layoutX="173.0" layoutY="189.0" prefWidth="150.0" />
+      </children></AnchorPane>
+   <AnchorPane fx:id="addNewStudentAnchorPane" layoutX="276.0" layoutY="62.0" prefHeight="379.0" prefWidth="378.0" style="-fx-background-color: black;">
+      <children>
+         <Label layoutX="33.0" layoutY="42.0" text="STUDENT  ID" textFill="#f7a707">
+            <font>
+               <Font name="Papyrus" size="12.0" />
+            </font>
+         </Label>
+         <Label layoutX="37.0" layoutY="162.0" text="COURSE" textFill="#f7a707">
+            <font>
+               <Font name="Papyrus" size="12.0" />
+            </font>
+         </Label>
+         <TextField fx:id="studentID" layoutX="175.0" layoutY="42.0" />
+         <Button fx:id="addButton" layoutX="40.0" layoutY="291.0" mnemonicParsing="false" onAction="#clickAdd" prefHeight="26.0" prefWidth="126.0" style="-fx-background-color: ORANGE;" text="ADD" textFill="#101010">
+            <font>
+               <Font name="Papyrus" size="12.0" />
+            </font>
+         </Button>
+         <Button layoutX="207.0" layoutY="291.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="126.0" style="-fx-background-color: ORANGE;" text="CANCEL" textFill="#101010">
+            <font>
+               <Font name="Papyrus" size="12.0" />
+            </font>
+         </Button>
+         <Label layoutX="37.0" layoutY="101.0" text="NAME" textFill="#f7a707">
+            <font>
+               <Font name="Papyrus" size="12.0" />
+            </font>
+         </Label>
+         <TextField fx:id="name" layoutX="175.0" layoutY="101.0" />
+         <Label layoutX="38.0" layoutY="221.0" text="SEMESTER" textFill="#f7a707">
+            <font>
+               <Font name="Papyrus" size="12.0" />
+            </font>
+         </Label>
+         <ComboBox fx:id="semesterComboBox" layoutX="175.0" layoutY="222.0" prefWidth="150.0" promptText="Select Semester" />
+         <ComboBox fx:id="courseComboBox" layoutX="175.0" layoutY="163.0" prefWidth="150.0" promptText="Select Course" />
+      </children>
+   </AnchorPane>
+   <AnchorPane fx:id="studentActivityAnchorPane" layoutX="276.0" layoutY="62.0" prefHeight="379.0" prefWidth="378.0" style="-fx-background-color: black;" visible="false">
+      <children>
+         <TableView fx:id="studentActivityTableView" layoutX="-43.0" layoutY="-10.0" prefHeight="406.0" prefWidth="469.0">
+           <columns>
+             <TableColumn fx:id="bookIDColumn" prefWidth="75.0" text="Book ID" />
+               <TableColumn fx:id="bookTitleColumn" prefWidth="75.0" text="Book Title" />
+             <TableColumn fx:id="studentIDColumn" prefWidth="75.0" text="Student ID" />
+               <TableColumn fx:id="nameColumn" prefWidth="62.4000244140625" text="Name" />
+               <TableColumn fx:id="dateOfIssueColumn" prefWidth="88.800048828125" text="Date of Issue" />
+               <TableColumn fx:id="dateOfReturnColumn" prefWidth="92.7999267578125" text="Date of Return" />
+           </columns>
+         </TableView>
+      </children>
+   </AnchorPane>
+   <Label textFill="orangered" fx:id="studentIDLabel" layoutX="330.0" layoutY="21.0" text="STUDENT ID" visible="false">
+      <font>
+         <Font name="Times New Roman bold" size="15.0" />
+      </font>
+   </Label>
+   <ComboBox fx:id="studentIDComboBoxSearch" layoutX="435.0" layoutY="17.0" prefWidth="150.0" visible="false" />
+   <AnchorPane fx:id="returnBookAnchorPane" layoutX="276.0" layoutY="40.0" prefHeight="397.0" prefWidth="378.0" style="-fx-background-color: black;" visible="false">
+      <children>
+         <Label layoutX="47.0" layoutY="35.0" text="BOOK  ID" textFill="#f2ae04">
+            <font>
+               <Font name="Papyrus" size="12.0" />
+            </font>
+         </Label>
+         <Label layoutX="31.0" layoutY="132.0" text="DETAILS" textFill="#f2ae04">
+            <font>
+               <Font name="Papyrus" size="12.0" />
+            </font>
+         </Label>
+         <ComboBox fx:id="returnBookID" layoutX="149.0" layoutY="35.0" prefWidth="150.0" />
+         <TextArea fx:id="returnDetailsTextArea" layoutX="39.0" layoutY="173.0" prefHeight="152.0" prefWidth="284.0" />
+         <Button fx:id="renewBookButton" layoutX="236.0" layoutY="342.0" mnemonicParsing="false" onAction="#clickRenewButton" prefHeight="26.0" prefWidth="126.0" style="-fx-background-color: ORANGE;" text="RENEW" textFill="#101010">
+            <font>
+               <Font name="Papyrus" size="12.0" />
+            </font>
+         </Button>
+         <Button fx:id="returnBookButton" layoutX="39.0" layoutY="342.0" mnemonicParsing="false" onAction="#clickReturnButton" prefHeight="26.0" prefWidth="126.0" style="-fx-background-color: ORANGE;" text="RETURN" textFill="#101010">
+            <font>
+               <Font name="Papyrus" size="12.0" />
+            </font>
+         </Button>
+         <Label layoutX="30.0" layoutY="78.0" text="STUDENT  ID" textFill="#f2ae04">
+            <font>
+               <Font name="Papyrus" size="12.0" />
+            </font>
+         </Label>
+         <ComboBox fx:id="returnStudentID" layoutX="149.0" layoutY="78.0" prefWidth="150.0" />
+      </children>
+   </AnchorPane>
+</AnchorPane>
